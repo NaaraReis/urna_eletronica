@@ -1,0 +1,245 @@
+
+/* Organizar o corpo da urna no centro da tela */
+    body {
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      font-family: Arial, sans-serif;
+      background-color: #f0f0f0;
+    }
+
+    /* Definições do escorpo da Urna */
+    .urna {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 30px;
+      background-color: rgb(204, 198, 198);
+      padding: 40px;
+      width: 800px;
+      height: 300px;
+      border-radius: 8px;
+      border: 1px solid black;
+      margin-bottom: 20px;
+    }
+
+    /* Definições para tela de votação */
+    .ladoE {
+      padding: 2px 20px 50px 10px;
+      width: 90%;
+      height: 90%;
+      background-color: rgb(255, 255, 255);
+      border: 1px solid black;
+      position: relative;
+    }
+
+    .tela {
+      font-family: 'Times New Roman', Times, serif;
+      font-weight: bold;
+    }
+
+    .numeroCandidato {
+      display: flex;
+      gap: 10px;
+    }
+
+    .digito {
+      width: 30px;
+      height: 38px;
+      border: 1px solid black;
+      font-size: 32px;
+      font-weight: bold;
+      text-align: center;
+    }
+
+    .infoCandidato {
+      margin-top: 10px;
+    }
+
+    /* Botões de Próximo voto, Finalizar votação e instruções */
+    .instrucoes h1 {
+      font-size: 18px;
+      font-family: 'Times New Roman', Times, serif;
+      font-weight: bold;
+    }
+
+    .btsEinstrucoes {
+      display: flex;
+      align-items: center;
+      gap: 100px;
+    }
+
+    .btProximoFinalizar {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+      font-size: 16px;
+      display: none; /* Inicialmente oculto */
+    }
+
+    #proximo, #finalizar {
+      width: 140px;
+      height: 30px;
+      font-size: 16px;
+      font-family: 'Times New Roman', Times, serif;
+      font-weight: bold;
+      border: solid 1px #000;
+      border-radius: 5px;
+    }
+
+    /* Foto do Candidato */
+    #foto {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      width: 100px;
+      height: 120px;
+      border: 1px solid #000;
+      object-fit: cover;
+    }
+
+    /* Parte que organiza a logo */
+    .logo {
+      background-color: rgb(243, 240, 240);
+      border: 1px solid black;
+      width: 292px;
+      height: 70px;
+    }
+
+    .logoJE {
+      width: 150px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 0 20px 0 30px;
+      gap: 60px;
+    }
+
+    .logoJE img {
+      width: 40%;
+      padding: 5px 0px 5px 15px;
+    }
+
+    .logoJE span {
+      font-size: 22px;
+      font-family: 'Times New Roman', Times, serif;
+      font-weight: bold;
+      color: black;
+      text-align: center;
+    }
+
+    /* Teclado númerico */
+    .teclado {
+      padding: 10px 2px 10px 2px;
+      width: 290px;
+      height: 233px;
+      flex: 1;
+      background-color: rgba(27, 27, 27, 0.849);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .botoes-numericos {
+      display: grid;
+      grid-template-columns: repeat(3, 55px);
+      gap: 10px;
+      margin-bottom: 5px;
+    }
+
+    .botoes-numericos .zero {
+      grid-column: 2; /* ocupa a segunda coluna da grade */
+    }
+
+    .numero {
+      padding: 10px 0 10px 0;
+      font-weight: bold;
+      color: #ffffff;
+      border: none;
+      border-radius: 5px;
+      background-color: black;
+      cursor: pointer;
+    }
+
+    /* Botões Verde, branco e laranja */
+    .botoes-acao {
+      display: flex;
+      align-items: flex-end;
+      gap: 10px;
+      padding: 0 10px 0 10px;
+      font-family: 'Times New Roman', Times, serif;
+    }
+
+    .branco {
+      width: 75px;
+      height: 35px;
+      background-color: white;
+      font-size: 12px;
+      font-weight: bolder;
+      color: black;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .corrige {
+      width: 75px;
+      height: 35px;
+      background-color: orange;
+      color: black;
+      font-size: 12px;
+      font-weight: bolder;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .confirma {
+      width: 75px;
+      height: 45px;
+      background-color: green;
+      color: black;
+      font-size: 12px;
+      font-weight: bolder;
+      padding: 2px 5px 0 5px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    /* Estilos para a tela de resultados */
+    .tela-resultados {
+      display: none;
+      width: 800px;
+      background-color: white;
+      padding: 20px;
+      border-radius: 8px;
+      border: 1px solid black;
+      margin-bottom: 20px;
+    }
+
+    .resultados-cargo {
+      margin-bottom: 20px;
+      border-bottom: 1px solid #ccc;
+      padding-bottom: 10px;
+    }
+
+    .candidato-resultado {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 5px;
+    }
+
+    .vencedor {
+      font-weight: bold;
+      color: green;
+    }
+
+    .total-votos {
+      margin-top: 10px;
+      font-weight: bold;
+    }

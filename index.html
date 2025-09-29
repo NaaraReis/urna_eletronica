@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="Autor" content="Naara Reis">
+  <meta name="Descrição" content="Atividade: Crindo Urna eletrônica">
+  <title>Urna eletrônica</title>
+  <link rel="stylesheet" href="CSS/style.css">
+</head>
+
+<body>
+  <main>
+    <section class="urna">
+      <section class="ladoE">
+        <div class="tela">
+          <p id="cargo">CARGO ATUAL</p>
+          <div class="numeroCandidato">
+            <p id="numero">Número: </p>
+            <span class="digito" id="digito1">0</span>
+            <span class="digito" id="digito2">0</span>
+          </div>
+
+          <div class="infoCandidato">
+            <p id="nome">Nome: </p>
+            <p id="partido">Partido: </p>
+          </div>
+
+          <img src="" id="foto" alt="Foto do Candidato">
+        </div>
+
+        <hr>
+
+        <div class="btsEinstrucoes">
+          <div class="instrucoes">
+            <h1>Aperte a Tecla:</h1>
+            <p>VERDE para confirmar <br>
+              LARANJA para corrigir <br>
+              BRANCO para votar em branco <br>
+              Número aleatório para votar nulo
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="ladoD">
+        <div class="logo">
+          <div class="logoJE">
+            <img src="IMG/logo.png" alt="Justiça Eleitoral">
+            <span>Justiça Eleitoral</span>
+          </div>
+        </div>
+
+        <section class="teclado">
+          <div class="botoes-numericos">
+            <button class="numero" data-valor="1">1</button>
+            <button class="numero" data-valor="2">2</button>
+            <button class="numero" data-valor="3">3</button>
+            <button class="numero" data-valor="4">4</button>
+            <button class="numero" data-valor="5">5</button>
+            <button class="numero" data-valor="6">6</button>
+            <button class="numero" data-valor="7">7</button>
+            <button class="numero" data-valor="8">8</button>
+            <button class="numero" data-valor="9">9</button>
+            <button class="numero zero" data-valor="0">0</button>
+          </div>
+
+          <div class="botoes-acao">
+            <button class="branco">BRANCO</button>
+            <button class="corrige">CORRIGE</button>
+            <button class="confirma">CONFIRMA</button>
+          </div>
+        </section>
+      </section>
+    </section>
+    
+    <div class="btProximoFinalizar" id="btProximoFinalizar">
+      <button id="proximo">Próximo Voto</button>
+      <button id="finalizar">Finalizar Votação</button>
+    </div>
+
+    <div class="tela-resultados" id="telaResultados">
+      <h1>RESULTADOS DA ELEIÇÃO</h1>
+      <div id="resultadosConteudo"></div>
+    </div>
+       <script src="JS/script.js"></script>
+  </main>
+  
+</body>
+
+</html>
